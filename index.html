@@ -1,0 +1,466 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Testing - TDD :: Vertica</title>
+
+		<meta name="description" content="Testing and TDD crash-course">
+		<meta name="author" content="Daniel González García">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/vertica.css" id="theme">
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section>
+					<h1>Testing - TDD</h1>
+					<h3>A crash-course</h3>
+					<p>
+						<small>Daniel González García</small>
+					</p>
+				</section>
+
+				<section>
+					<h2>Agenda</h2>
+					<ul>
+						<li>What and What Not</li>
+						<li>Testing and Design</li>
+						<li>Patterns Everywhere</li>
+						<li>Smelly Test</li>
+						<li>Behavior & Interaction</li>
+						<li>Q&amp;A</li>
+						<li>Code!!</li>
+					</ul>
+				</section>
+
+				<section>
+					<section>
+						<h2>What is...?</h2>
+						<h3>Unit Testing</h3>
+					</section>
+					<section>
+						<h3>Wikipedia</h3>
+						<blockquote>
+							“unit testing is a procedure used to validate that <b><i>individual units</i></b> of code are working properly.
+							A unit is the <b><i>smallest</i></b> testable part of an application.
+							[…] in object-oriented programming, the smallest unit is a method…”
+						</blockquote>
+					</section>
+					<section>
+						<h3>Pragmatic Unit Testing</h3>
+						<blockquote>
+							“A unit test is a piece of <b><i>code</i></b> written by a <b><i>developer</i></b> that exercises a very small,
+							specific area of the functionality of the code being tested.
+							[…] Unit tests are performed to prove that a piece of code does what the developer thinks it should do.”
+						</blockquote>
+					</section>
+					<section>
+						<h3>Code Complete</h3>
+						<blockquote>
+							“Unit testing is the execution of a complete class, routine, or small program that has been written
+							by a single programmer or team of programmers, which is tested <b><i>in isolation</i></b> from the more complete system.”
+						</blockquote>
+					</section>
+					<section>
+						<h3>Daniel González</h3>
+						<blockquote>
+							“Simple code to exercise small pieces of other code in isolation from all (or most) other parts
+							of the program in a repeatable and automated manner”
+						</blockquote>
+						<p>"Executable Documentation" with safety-net effect</p>
+					</section>
+				</section>
+
+				<section>
+					<h2>What is... not?</h2>
+					<h3>Unit Testing</h3>
+					<p class="fragment">The one and only testing a program needs</p>
+					<p class="fragment">An excuse not to perform other tests</p>
+					<p class="fragment">Looking at debugger “watches”</p>
+					<br/>
+					<p class="fragment">A console project with buttons to exercise the program</p>
+				</section>
+				
+				<section>
+					<section>
+						<h2>What is...?</h2>
+						<h3>TDD</h3>
+					</section>
+					<section>
+						<h3>Wikipedia</h3>
+						<blockquote>
+							“software development technique consisting of <b><i>short iterations</i></b> where new test cases covering
+							the desired improvement or new functionality are written <b><i>first</i></b>, then the production code necessary
+							to pass the tests is implemented, and finally the software is <b><i>refactored</i></b> to accommodate changes.”
+						</blockquote>
+					</section>
+					<section>
+						<h3>TDD: A Practical Guide</h3>
+						<blockquote>
+							“[…] a style of development where: you maintain an exhaustive suite of <b><i>Programmer Tests</i></b>,
+							no code goes into production unless it has associated tests, you write the tests first and tests determine
+							what code you <b><i>need to write</i></b>.”
+						</blockquote>
+					</section>
+					<section>
+						<h3>Test-Driven Development By Example</h3>
+						<blockquote>
+							“[…] drive development with <b><i>automated tests</i></b>, a style of development called
+							Test-Driven Development. In TDD, you:
+							<ul>
+								<li>Write new code only if you first have a <b><i>failing</i></b> automated test</li>
+								<li>Eliminate duplication.”</li>
+							</ul>
+						</blockquote>
+						<p>Red - Green - Refactor</p>
+					</section>
+				</section>
+				
+				<section>
+					<h2>What is... not?</h2>
+					<h3>TDD</h3>
+					<p class="fragment">Nothing that Unit Testing is not</p>
+					<br/>
+					<p class="fragment">Is not about testing</p>
+					<p class="fragment">Many people say it is a design technique with desirable side-effects</p>
+				</section>
+				
+				<section>
+					<h2>Good Design &#x2764; Testing</h2>
+					<p>Promotes several design principles: SRP, DIP, ...</p>
+					<br/>
+					<p>Fancy words for:</p>
+					<ul>
+						<li>Do only one thing at a time</li>
+						<li>Do not let implementation details ooze</li>
+						<li>Improve the structure of the code</li>
+					</ul>
+				</section>
+				
+				<section>
+					<section>
+						<h2>Common Test Patterns</h2>
+						<p>Help answering:</p>
+						<ul>
+							<li>What does a test mean?</li>
+							<li>What to test?</li>
+							<li>Which data do I need to test?</li>
+							<li>When do I stop Testing?</li>
+						</ul>
+					</section>
+					<section>
+						<h3>Common Patterns</h3>
+						<p>Automated tests</p>
+						<p>Isolated tests</p>
+						<p>List of tests</p>
+						<p>Test first (or near)</p>
+						<p>Assert first</p>
+						<p>Test data</p>
+						<aside class="notes">
+							automated: reduce stress and save time
+							isolated: no dependencies between tests and no side-effects to tear down or setup
+							list: indented bullets of tests
+							first: keep details in your head
+							assert first: start and the bottom and fill-in the gaps
+							test data: simple --> easy-to-follow --> real data --> edge cases
+						</aside>
+					</section>
+					<section>
+						<h3>More Common Patterns</h3>
+						<p>Evident Data</p>
+						<p>One Step Test</p>
+						<p>Explanation Test</p>
+						<p>Learning Test</p>
+						<p>Regression Test</p>
+						<p>Scared to Bored</p>
+						<aside class="notes">
+							evident data: make explicit to reader what is test. "if it is not important for the test it is important to hide it"
+							one step test: start with easiest from list. one step at a time. gaining confidence and knowledge
+							explanation: explain of your code with test
+							learning: gain knowledge from dependencies from test
+							regression: defect reported = test to reproduce (red) + fix + rerun (green)
+							fear: write test until fear is transformed into boredom
+						</aside>
+					</section>
+					<section>
+						<h3>Even More Common Patterns</h3>
+						<p>Break</p>
+						<p>Do over</p>
+						<p>Get comfy</p>
+						<aside class="notes">
+							break: walk away from keyboard to think
+							do over: fear not starting from scratch when things get too messy
+							comfy: optimize environment and tools. It IS intense
+						</aside>
+					</section>
+				</section>
+				
+				<section>
+					<section>
+						<h2>Testing Test Patterns</h2>
+						<p>More concrete but still commons enough</p>
+					</section>
+					<section>
+						<h3>Testing Test Patterns</h3>
+						<p>Child Test</p>
+						<p>Mock Object</p>
+						<p>Log string</p>
+						<p>Crash Test Dummy</p>
+						<p>Broken Test</p>
+						<aside class="notes">
+							child: complex tests are to be broken
+							mock: judge what and when to mock
+							log: double has bitacore of what happened that can be interrogated
+							crash: use dummies to simulate effects of crashes
+							broken: leave a failing test for next session
+						</aside>
+					</section>
+					<section>
+						<h3>More Testing Test Patterns</h3>
+						<p>Clean Check-in</p>
+						<p>Fake it (till you make it)</p>
+						<p>Triangulate</p>
+						<p>Obvious Implementation</p>
+						<p>From One to many</p>
+						<p>Ping-pong</p>
+						<aside class="notes">
+							clean: commit working code with tests passing
+							fake it: fail is just one step behind success. rinse and repeat until you're done
+							triangulate: 2+ cases before generalizing
+							obvious: easy things are also implemented
+							one: test collection features with one element and then with many
+							ping-pong: pair member writes the failing test, the other implements feature,...
+						</aside>
+					</section>
+				</section>
+				
+				<section>
+					<section>
+						<h2>xUnit Patterns</h2>
+						<p>More concrete and explain framework's design choices</p>
+					</section>
+					<section>
+						<h3>xUnit Patterns</h3>
+						<p>Assert</p>
+						<p>Fixture</p>
+						<p>External Fixture</p>
+						<aside class="notes">
+							assertion: contextual information over a boolean
+							fixture: tackle duplication with setup methods
+							external: leave the sand as if you were never there
+						</aside>
+					</section>
+					<section>
+						<h3>More xUnit Patterns</h3>
+						<p>Test method</p>
+						<p>Exception Test</p>
+						<p>Aggregated fixtures</p>
+						<aside class="notes">
+							method: a case is a method
+							exception: check whether exceptions occur
+							aggregated: categorize tests
+						</aside>
+					</section>
+				</section>
+				
+				<section>
+					<section>
+						<h2>Smells and Anti-Patterns</h2>
+						<p>When things go awry</p>
+					</section>
+					<section>
+						<h3>Smells</h3>
+						<p>Testing something else than the SUT</p>
+						<p>Complicated setup</p>
+						<p>Slow tests</p>
+						<p>Test break too often</p>
+						<aside class="notes">
+							not sut: back to drawing board. You do not know what you are doing, tryng too much at a time
+							complicated: extract and rethink design
+							slow: you are reaching outside. Think twice
+							fragile: testing implementation details. Test essence
+						</aside>
+					</section>
+					<section>
+						<h3>Anti-Patterns</h3>
+						<p>Manual assertion</p>
+						<p>Too-many assertions</p>
+						<p>Redundant assertion</p>
+						<aside class="notes">
+							manual: ignored fail and inspect manually. Automate everything
+							too many: take advantage of complex setup. Split and extract setup
+							redundant: remove noise
+						</aside>
+					</section>
+					<section>
+						<h3>More Anti-Patterns</h3>
+						<p>Superficial test</p>
+						<p>Complex test</p>
+						<p>External dependency</p>
+						<p>Exception swallowing</p>
+						<aside class="notes">
+							superficial: only easy or sunny-day paths. cover as much as possible of important/difficult
+							complex: difficult to understand. Break code and tests
+							external: run or pass depending of something else than test. Favor unit tests
+							swallow: discard exception for test to pass. Fix your design
+						</aside>
+					</section>
+				</section>
+				
+				<section>
+					<section>
+						<h2>Doing it Right</h2>
+						<p>
+							Heuristics to check whether your tests are fit.
+						</p>
+					</section>
+					<section>
+						<h3>Right BICEP</h3>
+						<p>Are results <b>RIGHT</b>?</p>
+						<p>Are <b>B</b>oundary conditions correct?</p>
+						<p>Can you check <b>I</b>nverse relationships?</p>
+						<p>Can you <b>C</b>ross-check results by other means?</p>
+						<p>Can you force <b>E</b>rror conditions to happen?</p>
+						<p>Are <b>P</b>erformance characteristics within bounds?</p>
+					</section>
+					<section>
+						<h3>FIRST</h3>
+						<p><b>F</b>ast: encourage running</p>
+						<p><b>I</b>ndependent: executable in any order</p>
+						<p><b>R</b>epeteable: in whichever environment</p>
+						<p><b>S</b>elf-Validating: either yay or nay</p>
+						<p><b>T</b>imely: before or near development of feature</p>
+					</section>
+				</section>
+				
+				<section>
+					<section>
+						<h2>Flavors of Unit Testing</h2>
+						<p>
+							State & Interation
+						</p>
+					</section>
+					<section>
+						<h3>State-Based Testing</h3>
+						<p>Checks that the subject performs its work by inspecting direct outputs: return value or argument</p>
+						<ul>
+							<li>return value</li>
+							<li>argument</li>
+						</ul>
+						<p>Simple enough to be perceived as "the way to test"</p>
+						<p>Watch internals exposure</p>
+						<p>Familiar to most developers</p>
+					</section>
+					<section>
+						<h3>Interaction-Based Testing</h3>
+						<p>Checks that the subject performs the steps needed to carry out its work</p>
+						<ul>
+							<li>right interactions exercised</li>
+							<li>or not exercised</li>
+						</ul>
+						<p>Less simple that State-Based</p>
+						<p>Less familiar to most developers &rArr; Reaction to change</p>
+						<p>Watch brittleness</p>
+						<p>Sometimes is the <b>only</b> way</p>
+					</section>
+					<section>
+						<h3>When?</h3>
+						<p>State-Based</p>
+						<ul>
+							<li>Isolated subject</li>
+							<li>Tightly-coupled dependencies</li>
+							<li>Simple dependencies that can be part of the test</li>
+						</ul>
+						<p>Interaction-Based</p>
+						<ul>
+							<li>De-coupled dependencies</li>
+							<li>Complex dependencies that cannot be part of the test</li>
+						</ul>
+					</section>
+				</section>
+				
+				<section>
+					<section>
+						<h2>Test Doubles</h2>
+						<p>Replacements of stars (real objects) for dangerous (testing) scenarios</p>
+						<ul>
+						<li>Real object has nondeterministic behavior</li>
+						<li>Real object is difficult to set up</li>
+						<li>Real object has behavior that is hard to trigger</li>
+						<li>Real object is slow</li>
+						<li>Real object has (or is) a user interface</li>
+						<li>Test needs to ask the real object about how it was used</li>
+						<li>Real object does not yet exist</li>
+						</ul>
+						<aside class="notes">
+							nondeterministic: stock-prices
+							difficult: network error
+							real asked: callback function executed
+						</aside>
+					</section>
+					<section>
+						<h2>Attack of the Clones</h2>
+						<p>Dummies</p>
+						<p>Stubs</p>
+						<p>Spies</p>
+						<p>Mocks</p>
+						<p>Fakes</p>
+						<aside class="notes">
+							dummy: do nothing except be pretty and discrete
+							stub: provide fixed answers
+							spies: save information for later review
+							mocks: non-real objects programmed with expectations that are verified later
+							fakes: object with implementation not suitable for production
+						</aside>
+					</section>
+				</section>
+
+				<section style="text-align: left;">
+					<h1>Questions?</h1>
+				</section>
+			</div>
+
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+
+			// Full list of configuration options available at:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+				// Optional reveal.js plugins
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/notes/notes.js', async: true }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
