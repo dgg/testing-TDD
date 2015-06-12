@@ -1,27 +1,28 @@
-@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400italic,600,600italic);
+/*@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400italic,600,600italic);*/
+@import url(http://fonts.googleapis.com/css?family=Titillium+Web:400,400italic,600,600italic);
 /**
  * Black theme for reveal.js. This is the opposite of the 'white' theme.
  *
  * Copyright (C) 2015 Hakim El Hattab, http://hakim.se
  */
 section.has-light-background, section.has-light-background h1, section.has-light-background h2, section.has-light-background h3, section.has-light-background h4, section.has-light-background h5, section.has-light-background h6 {
-  color: #222; }
+  color: #EEE; }
 
 /*********************************************
  * GLOBAL STYLES
  *********************************************/
 body {
-  background: #222;
-  background-color: #222; }
+  background: #EEE;
+  background-color: #EEE; }
 
 .reveal {
-  font-family: 'Source Sans Pro', Helvetica, sans-serif;
+  font-family: 'Titillium Web', Helvetica, sans-serif;
   font-size: 38px;
   font-weight: normal;
-  color: #fff; }
+  color: #3E3E3E; }
 
 ::selection {
-  color: #fff;
+  color: #3E3E3E;
   background: #bee4fd;
   text-shadow: none; }
 
@@ -34,8 +35,8 @@ body {
  *********************************************/
 .reveal h1, .reveal h2, .reveal h3, .reveal h4, .reveal h5, .reveal h6 {
   margin: 0 0 20px 0;
-  color: #fff;
-  font-family: 'Source Sans Pro', Helvetica, sans-serif;
+  color: #0BA1DA;
+  font-family: 'Titillium Web', Helvetica, sans-serif;
   font-weight: 600;
   line-height: 1.2;
   letter-spacing: normal;
@@ -187,19 +188,19 @@ body {
  * LINKS
  *********************************************/
 .reveal a {
-  color: #42affa;
+  color: #0BA1DA;
   text-decoration: none;
   -webkit-transition: color 0.15s ease;
   -moz-transition: color 0.15s ease;
   transition: color 0.15s ease; }
 
 .reveal a:hover {
-  color: #8dcffc;
+  color: #E45D58;
   text-shadow: none;
   border: none; }
 
 .reveal .roll span:after {
-  color: #fff;
+  color: #000;
   background: #068ee9; }
 
 /*********************************************
@@ -208,7 +209,7 @@ body {
 .reveal section img {
   margin: 15px 0px;
   background: rgba(255, 255, 255, 0.12);
-  border: 4px solid #fff;
+  border: 4px solid #000;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.15); }
 
 .reveal a img {
@@ -218,35 +219,35 @@ body {
 
 .reveal a:hover img {
   background: rgba(255, 255, 255, 0.2);
-  border-color: #42affa;
+  border-color: #0BA1DA;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.55); }
 
 /*********************************************
  * NAVIGATION CONTROLS
  *********************************************/
 .reveal .controls div.navigate-left, .reveal .controls div.navigate-left.enabled {
-  border-right-color: #42affa; }
+  border-right-color: #0BA1DA; }
 
 .reveal .controls div.navigate-right, .reveal .controls div.navigate-right.enabled {
-  border-left-color: #42affa; }
+  border-left-color: #0BA1DA; }
 
 .reveal .controls div.navigate-up, .reveal .controls div.navigate-up.enabled {
-  border-bottom-color: #42affa; }
+  border-bottom-color: #0BA1DA; }
 
 .reveal .controls div.navigate-down, .reveal .controls div.navigate-down.enabled {
-  border-top-color: #42affa; }
+  border-top-color: #0BA1DA; }
 
 .reveal .controls div.navigate-left.enabled:hover {
-  border-right-color: #8dcffc; }
+  border-right-color: #E45D58; }
 
 .reveal .controls div.navigate-right.enabled:hover {
-  border-left-color: #8dcffc; }
+  border-left-color: #E45D58; }
 
 .reveal .controls div.navigate-up.enabled:hover {
-  border-bottom-color: #8dcffc; }
+  border-bottom-color: #E45D58; }
 
 .reveal .controls div.navigate-down.enabled:hover {
-  border-top-color: #8dcffc; }
+  border-top-color: #E45D58; }
 
 /*********************************************
  * PROGRESS BAR
@@ -255,7 +256,7 @@ body {
   background: rgba(0, 0, 0, 0.2); }
 
 .reveal .progress span {
-  background: #42affa;
+  background: #0BA1DA;
   -webkit-transition: width 800ms cubic-bezier(0.26, 0.86, 0.44, 0.985);
   -moz-transition: width 800ms cubic-bezier(0.26, 0.86, 0.44, 0.985);
   transition: width 800ms cubic-bezier(0.26, 0.86, 0.44, 0.985); }
@@ -264,4 +265,14 @@ body {
  * SLIDE NUMBER
  *********************************************/
 .reveal .slide-number {
-  color: #42affa; }
+  color: #0BA1DA; }
+  
+ .red{
+	color: #E45D58;
+ }
+ .green{
+	color: #1ABC9C;
+ }
+ .refactor{
+	color: #111;
+ }
