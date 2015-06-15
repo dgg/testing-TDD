@@ -39,7 +39,20 @@ Unit test the extension method <code>.Left()</code> and <code>.LeftFromFirst()</
 
 This Kata is the perfect opportunity to sharpen the data testing capabilities of your testing framework of choice.
 
-## Kata #3. Membership
-Unit thest the <code>User</code> and <code>MembershipService</code> classes.
+## Kata #3. AlphabeticalAggregator
+Unit thest the <code>AlphabeticalAggregator</code> class (extra bonus points for testing the other support classes in the kata).
 
 This Kata will let you show off your Interaction-Testing skills. Remember: a unit is a fuzzy term and overdoing hurts.
+
+### Hints
+<blockquote> 
+Use a more manageable alphabet provider for tests (twenty something is no fun).
+</blockquote>
+<blockquote >
+Interesting scenarios to test:
+
+* there are *alphabet_length* buckets plust an overflow
+* all buckets have an initial corresponding to an alphabet letter except the overflow that has none
+* aggregables that start with a letter outside the alphabet go to the overflow
+* aggregables end up sorted in the buckets
+</blockquote >
