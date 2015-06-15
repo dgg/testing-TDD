@@ -48,12 +48,12 @@ This Kata will let you show off your Interaction-Testing skills. Remember: a uni
 <blockquote> 
 Use a more manageable alphabet provider for tests (twenty something is no fun).
 </blockquote>
+
 <blockquote >
 Interesting scenarios to test:
-
-* there are *alphabet_length* buckets plust an overflow
-* all buckets have an initial corresponding to an alphabet letter except the overflow that has none
-* aggregables that start with a letter outside the alphabet go to the overflow
-* aggregables end up sorted in the buckets
-* 
-</blockquote >
+<ul>
+<li> there are *alphabet_length* buckets plust an overflow</li>
+<li>all buckets have an initial corresponding to an alphabet letter except the overflow that has none</li>
+<li>aggregables that start with a letter outside the alphabet go to the overflow</li>
+<li>aggregables end up sorted in the buckets</li>
+</blockquote>
