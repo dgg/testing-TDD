@@ -5,16 +5,17 @@
 With the Katas proposed, you'll have the chance to put into practice the patterns, heuristics and techniques showcased to you in the [presentation](http://vertica-as.github.io/testing-TDD "slides").
 
 ## Dynamics
-You are going to be given 1.5 hours to complete as many Katas as you can. A Kata is a small exercise which completion is not obvious (testing never is), so you are left with the task to know (or ask or agree) when you are done and are ready to move onto the next.
+You are going to be given **1.5 hours** to complete as many Katas as you can.
+<br/>A Kata is a small exercise which completion is not obvious (testing never is), so you are left with the task to know (or ask or agree) when you are done and are ready to move onto the next. These Katas are independent from each other and can be done in whichever order one fancies, but they are increasing in complexity.
 
-You can work on your own or you can work in pairs. Lone wolfs are also successful.
+You can work on your own or you can work in pairs. Lone wolfs are successful but pairs are le-gen-da-ry.
 
 You are very welcome to ask me as many questions as you want, ask for help, cry like a baby or swear like a Geordie Shore cast member.
 
 ### Setup
 The test subjects are included in a Visual Studio class library project. Familiarity with Visual Studio is expected, otherwise let me know and we will have a short and potentially ugly conversation.
 
-Despite being hosted in GitHub you are not expected to be profficient in Git, but it will help you during the setup process.
+Despite being hosted in _GitHub_ you are not expected to be profficient in _Git_, but it will help you during the setup process.
 
 These are the general instructions, you can follow them using your command line awesomeness, the training wheels of [GitHub for Windows](https://windows.github.com/) or the stick-in-the-wheels of [Visual Studio Git Integration](https://msdn.microsoft.com/en-us/library/hh850437.aspx):
  
@@ -36,7 +37,7 @@ You'll leverage your analytics skills and the use of lists to plan your testing.
 ## Kata #2. Left() and LeftFromFirst()
 Unit test the extension method <code>.Left()</code> and <code>.LeftFromFirst()</code>.
 
-This Kata is the perfect opportunity to sharpen the data testing capabilities of yout testing framework.
+This Kata is the perfect opportunity to sharpen the data testing capabilities of your testing framework of choice.
 
 ## Kata #3. Membership
 Unit thest the <code>User</code> and <code>MembershipService</code> classes.
