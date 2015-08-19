@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace Testing.TDD.Kata_1
 {
-	class MajorAndMinorEquality : IEqualityComparer<Version>
+	public class MajorAndMinorEquality : IEqualityComparer<Version>
 	{
 		public bool Equals(Version x, Version y)
 		{
