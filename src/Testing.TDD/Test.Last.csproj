@@ -7,8 +7,8 @@
     <ProjectGuid>{F07E4FB3-E88E-416D-958F-258E0921C122}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Testing.TDD</RootNamespace>
-    <AssemblyName>Testing.TDD</AssemblyName>
+    <RootNamespace>Test.Last</RootNamespace>
+    <AssemblyName>Test.Last</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>

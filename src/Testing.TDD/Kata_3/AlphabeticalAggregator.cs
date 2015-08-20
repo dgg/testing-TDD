@@ -5,7 +5,7 @@ using System.Linq;
 using Vertica.Utilities_v4.Extensions.EnumerableExt;
 using Vertica.Utilities_v4.Patterns;
 
-namespace Testing.TDD.Kata_3
+namespace Test.Last.Kata_3
 {
 	public class AlphabeticalAggregator
 	{

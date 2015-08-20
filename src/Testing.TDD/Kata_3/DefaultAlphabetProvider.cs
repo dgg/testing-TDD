@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using Vertica.Utilities_v4;
 
-namespace Testing.TDD.Kata_3
+namespace Test.Last.Kata_3
 {
 	internal class DefaultAlphabetProvider : IAlphabetProvider
 	{

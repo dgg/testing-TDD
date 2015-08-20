@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Testing.TDD.Kata_2
+namespace Test.Last.Kata_2
 {
 	static class StringExtensions
 	{

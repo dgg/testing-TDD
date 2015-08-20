@@ -1,7 +1,7 @@
 ﻿using System.Globalization;
 using Vertica.Utilities_v4.Extensions.StringExt;
 
-namespace Testing.TDD.Kata_3
+namespace Test.Last.Kata_3
 {
 	internal static class AlphabeticallyAggregableExtensions
 	{

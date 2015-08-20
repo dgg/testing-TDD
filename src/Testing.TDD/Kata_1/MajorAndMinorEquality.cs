@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace Testing.TDD.Kata_1
+namespace Test.Last.Kata_1
 {
 	public class MajorAndMinorEquality : IEqualityComparer<Version>
 	{
