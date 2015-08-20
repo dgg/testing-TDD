@@ -2,7 +2,7 @@
 
 namespace Test.Last.Kata_2
 {
-	static class StringExtensions
+	public static class StringExtensions
 	{
 		private static string nullOrAction(this string argument, Func<string> func)
 		{
