@@ -141,6 +141,24 @@
 				</section>
 				
 				<section>
+					<h2>TDD Premises</h2>
+					<p class="fragment">Money premise</p>
+					<p class="fragment">Correlation premise</p>
+					<p class="fragment">Chain premise</p>
+					<p class="fragment">Judgement premise</p>
+					<p class="fragment">Driving premise</p>
+					<aside class="notes">
+							<ul>
+								<li>$$: TDD enables more features faster</li>
+								<li>correlation: Quality and productivity change together</li>
+								<li>chain: chains tested by each link</li>
+								<li>judgement: individual human judgement is a must</li>
+								<li>driving: testability is a first-class design participant</li>
+							</ul>
+						</aside>
+				</section>
+				
+				<section>
 					<h2>Good Design &#x2764; Testing</h2>
 					<p>Promotes several design principles: SRP, DIP, ...</p>
 					<br/>
@@ -225,33 +243,27 @@
 						<h3>Testing Test Patterns</h3>
 						<p>Child Test</p>
 						<p>Mock Object</p>
-						<p>Log string</p>
 						<p>Crash Test Dummy</p>
-						<p>Broken Test</p>
+						<p>Broken Test / Clean commits</p>
 						<aside class="notes">
 							<ul>
 								<li>child: complex tests are to be broken</li>
 								<li>mock: judge what and when to mock</li>
-								<li>log: double has bitacore of what happened that can be interrogated</li>
 								<li>crash: use dummies to simulate effects of crashes</li>
-								<li>broken: leave a failing test for next session</li>
+								<li>broken: leave a failing test for next session but only commit passing tests</li>
 							</ul>
 						</aside>
 					</section>
 					<section>
 						<h3>More Testing Test Patterns</h3>
-						<p>Clean Check-in</p>
 						<p>Fake it (till you make it)</p>
 						<p>Triangulate</p>
-						<p>Obvious Implementation</p>
 						<p>From One to many</p>
 						<p>Ping-pong</p>
 						<aside class="notes">
 							<ul>
-								<li>clean: commit working code with tests passing</li>
 								<li>fake it: fail is just one step behind success. rinse and repeat until you're done</li>
 								<li>triangulate: 2+ cases before generalizing</li>
-								<li>obvious: easy things are also implemented</li>
 								<li>one: test collection features with one element and then with many</li>
 								<li>ping-pong: pair member writes the failing test, the other implements feature,...</li>
 							</ul>
