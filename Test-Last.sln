@@ -1,22 +1,39 @@
-﻿
+
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2013
-VisualStudioVersion = 12.0.40629.0
-MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test.Last", "src\Test.Last\Test.Last.csproj", "{F07E4FB3-E88E-416D-958F-258E0921C122}"
+# Visual Studio 15
+VisualStudioVersion = 15.0.26124.0
+MinimumVisualStudioVersion = 15.0.26124.0
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{3E289FAE-8CB8-46DE-AF58-6D84D2191C15}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test.Last", "src\Test.Last\Test.Last.csproj", "{B14F2546-31E4-4768-9132-823AFCE6FACD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
 		Release|Any CPU = Release|Any CPU
-	EndGlobalSection
-	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{F07E4FB3-E88E-416D-958F-258E0921C122}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{F07E4FB3-E88E-416D-958F-258E0921C122}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{F07E4FB3-E88E-416D-958F-258E0921C122}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{F07E4FB3-E88E-416D-958F-258E0921C122}.Release|Any CPU.Build.0 = Release|Any CPU
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B14F2546-31E4-4768-9132-823AFCE6FACD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B14F2546-31E4-4768-9132-823AFCE6FACD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B14F2546-31E4-4768-9132-823AFCE6FACD}.Debug|x64.ActiveCfg = Debug|x64
+		{B14F2546-31E4-4768-9132-823AFCE6FACD}.Debug|x64.Build.0 = Debug|x64
+		{B14F2546-31E4-4768-9132-823AFCE6FACD}.Debug|x86.ActiveCfg = Debug|x86
+		{B14F2546-31E4-4768-9132-823AFCE6FACD}.Debug|x86.Build.0 = Debug|x86
+		{B14F2546-31E4-4768-9132-823AFCE6FACD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B14F2546-31E4-4768-9132-823AFCE6FACD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B14F2546-31E4-4768-9132-823AFCE6FACD}.Release|x64.ActiveCfg = Release|x64
+		{B14F2546-31E4-4768-9132-823AFCE6FACD}.Release|x64.Build.0 = Release|x64
+		{B14F2546-31E4-4768-9132-823AFCE6FACD}.Release|x86.ActiveCfg = Release|x86
+		{B14F2546-31E4-4768-9132-823AFCE6FACD}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{B14F2546-31E4-4768-9132-823AFCE6FACD} = {3E289FAE-8CB8-46DE-AF58-6D84D2191C15}
 	EndGlobalSection
 EndGlobal

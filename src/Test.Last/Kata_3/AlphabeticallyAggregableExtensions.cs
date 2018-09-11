@@ -1,5 +1,5 @@
 ﻿using System.Globalization;
-using Vertica.Utilities_v4.Extensions.StringExt;
+using Vertica.Utilities.Extensions.StringExt;
 
 namespace Test.Last.Kata_3
 {

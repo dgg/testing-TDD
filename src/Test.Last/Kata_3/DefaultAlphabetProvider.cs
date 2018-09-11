@@ -1,5 +1,5 @@
 ﻿using System.Collections.Generic;
-using Vertica.Utilities_v4;
+using Vertica.Utilities;
 
 namespace Test.Last.Kata_3
 {

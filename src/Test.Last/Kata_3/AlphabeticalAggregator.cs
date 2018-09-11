@@ -2,8 +2,8 @@
 using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
-using Vertica.Utilities_v4.Extensions.EnumerableExt;
-using Vertica.Utilities_v4.Patterns;
+using Vertica.Utilities.Extensions.EnumerableExt;
+using Vertica.Utilities.Patterns;
 
 namespace Test.Last.Kata_3
 {
