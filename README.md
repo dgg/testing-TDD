@@ -11,14 +11,12 @@ The assignment is a simple program with an informal specification that has to be
 
 You can work on your own or you can work in pairs. Lone wolfs are successful but pairs are le-gen-da-ry and ping-pong is just fun.
 
-You are very welcome to ask me as many questions as you want, ask for help, cry like a baby or swear like a Geordie Shore cast member.
+You are very welcome to ask me as many questions as you want, ask for help, cry like a baby or swear like a _{insert_embarrasing_reality_show}_ cast member.
 
 ## Setup
 
 The test is written in plain English. Tests and production code can be written in whichever language or platform the developer/s feel/s capable of.
-<br/>I do recommend C# because that is what we use the most and because I believe is a pretty good language.
-
-Despite being hosted in GitHub you are not expected to be profficient in Git, but it will help you during the setup process.
+<br/>I do recommend **C#** because that is what we use the most and because I believe is a pretty good language. However, I have also included library recommendations for our strong-willed **javascript** developers.
 
 These are the general instructions, you can follow them using your command line awesomeness or your middle-of-the-mall IDE voodoo:
 
